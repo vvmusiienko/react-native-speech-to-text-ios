@@ -46,7 +46,7 @@ componentWillUnmount() {
 
 ```
 
-To stop recording call `SpeechToText.finishRecognition()` but after that you can continue to receive even with final recognition results. The events will not arrive after `result.isFinal == true`.
+To stop recording call `SpeechToText.finishRecognition()` but after that you can continue to receive event with final recognition results. The events will not arrive after `result.isFinal == true`.
 Call `SpeechToText.stopRecognition()` to cancel current recognition task.
 The `result` objects reflects Apple `SFSpeechRecognitionResult` class.
 
