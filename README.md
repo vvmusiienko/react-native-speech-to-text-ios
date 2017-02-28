@@ -30,6 +30,12 @@ Application will crash if you don't do this.
 
 ```js
 
+import {
+  ...
+  NativeAppEventEmitter,
+  ...
+} from 'react-native';
+
 var SpeechToText = require('react-native-speech-to-text-ios');
 
 ...
