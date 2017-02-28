@@ -18,7 +18,7 @@
   "repository" :
   {
     "type" : "git",
-    "url" : "https://github.com/npm/npm.git"
+    "url" : "https://github.com/muhaos/react-native-speech-to-text-ios"
   },
   "maintainers": [
     {
@@ -35,5 +35,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
