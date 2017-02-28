@@ -1,9 +1,9 @@
 
 #import "RNSpeechToTextIos.h"
 #import <UIKit/UIKit.h>
-#import "RCTUtils.h"
-#import "RCTBridge.h"
-#import "RCTEventDispatcher.h"
+#import <React/RCTUtils.h>
+#import <React/RCTBridge.h>
+#import <React/RCTEventDispatcher.h>
 #import <Speech/Speech.h>
 
 @interface RNSpeechToTextIos () <SFSpeechRecognizerDelegate>

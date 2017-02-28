@@ -12,6 +12,20 @@ React Native speech recognition component for iOS 10+
 
 `$ react-native link react-native-speech-to-text-ios`
 
+## IMPORTANT xCode plist settings
+
+Also, you need open the React Native xCode project and add two new keys into `Info.plist`
+Just right click on `Info.plist` -> `Open As` -> `Source Code` and paste these strings somewhere into root `<dict>` tag
+
+```xml
+<key>NSSpeechRecognitionUsageDescription</key>
+<string>Your usage description here</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Your usage description here</string>
+```
+
+Application will crash if you don't do this.
+
 ## Usage
 
 ```js
