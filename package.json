@@ -1,0 +1,34 @@
+{
+  "author": "Volodymyr Musiienko <volodymir.musienko@gmail.com>",
+  "dependencies": {},
+  "description": "React Native speech recognition component for iOS 10+",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "9d67483f3b7857a0873d952e289a4a5fcbac6ae5",
+    "tarball": "https://registry.npmjs.org/react-native-speech-to-text-ios/-/react-native-speech-to-text-ios-1.0.0.tgz"
+  },
+  "keywords": [
+    "react-native",
+    "speech",
+    "recognition"
+  ],
+  "license": "",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "muhaos",
+      "email": "volodymir.musienko@gmail.com"
+    }
+  ],
+  "name": "react-native-speech-to-text-ios",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react-native": ">=0.29"
+  },
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
