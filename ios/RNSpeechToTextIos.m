@@ -12,6 +12,7 @@
 @property (nonatomic) SFSpeechAudioBufferRecognitionRequest* recognitionRequest;
 @property (nonatomic) AVAudioEngine* audioEngine;
 @property (nonatomic) SFSpeechRecognitionTask* recognitionTask;
+@property (nonatomic) AVAudioSession* audioSession;
 
 
 @property (nonatomic, weak, readwrite) RCTBridge *bridge;
@@ -42,18 +43,18 @@
     
     
     NSError* audioSessionError = nil;
-    AVAudioSession* audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryRecord error:&audioSessionError];
+    self.audioSession = [AVAudioSession sharedInstance];
+    [self.audioSession setCategory:AVAudioSessionCategoryRecord error:&audioSessionError];
     if (audioSessionError != nil) {
         [self sendResult:RCTMakeError([audioSessionError localizedDescription], nil, nil) :nil :nil :nil];
         return;
     }
-    [audioSession setMode:AVAudioSessionModeMeasurement error:&audioSessionError];
+    [self.audioSession setMode:AVAudioSessionModeMeasurement error:&audioSessionError];
     if (audioSessionError != nil) {
         [self sendResult:RCTMakeError([audioSessionError localizedDescription], nil, nil) :nil :nil :nil];
         return;
     }
-    [audioSession setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&audioSessionError];
+    [self.audioSession setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&audioSessionError];
     if (audioSessionError != nil) {
         [self sendResult:RCTMakeError([audioSessionError localizedDescription], nil, nil) :nil :nil :nil];
         return;
@@ -147,6 +148,8 @@
 - (void) teardown {
     [self.recognitionTask cancel];
     self.recognitionTask = nil;
+    [self.audioSession setCategory:AVAudioSessionCategoryAmbient error:nil];
+    self.audioSession = nil;
     
     if (self.audioEngine.isRunning) {
         [self.audioEngine stop];
