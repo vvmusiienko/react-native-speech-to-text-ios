@@ -8,8 +8,6 @@ React Native speech recognition component for iOS 10+
 
 `$ npm install react-native-speech-to-text-ios --save`
 
-### Mostly automatic installation
-
 `$ react-native link react-native-speech-to-text-ios`
 
 ## IMPORTANT xCode plist settings
