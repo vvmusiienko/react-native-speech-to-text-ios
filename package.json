@@ -15,10 +15,9 @@
   ],
   "license": "",
   "main": "index.js",
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/muhaos/react-native-speech-to-text-ios"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhaos/react-native-speech-to-text-ios"
   },
   "maintainers": [
     {
@@ -35,5 +34,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.3"
+  "version": "1.0.3",
+  "homepage": "https://github.com/muhaos/react-native-speech-to-text-ios#readme"
 }
